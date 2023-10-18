@@ -1,6 +1,9 @@
 import java.util.Scanner ;
-public class MainClass {
+import java.math.BigInteger;
+//import java.lang.Math;
 
+public class MainClass {
+	
 	public static void main(String[] args) {
 		
        Scanner input = new Scanner (System.in);
@@ -28,7 +31,14 @@ public class MainClass {
 		}
 		
 		System.out.println("Noua valaore este " + inputValue);
-	
+		
+		BigInteger o = new BigInteger("1");
+		int putere = 64;
+		BigInteger j = new BigInteger("2");
+		for(int i = 0; i < putere; i++)
+		{
+            o = o.multiply(j);
+		} 
+		System.out.println((o.add(BigInteger.ONE.negate())));
 	}
-
 }
